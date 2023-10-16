@@ -1,0 +1,2 @@
+
+void doubleNumber(int num);
