@@ -110,16 +110,56 @@ so prefer using single quotes for the characters */
 
 // always initialize the  pointer
 // int *p{}// this denotes the nullptr
+// int main()
+// {
+//     int x = 44;
+//     int *pointer;
+//     int *pointer2{&x};
+
+//     std::cout<<x<<std::endl;
+//     std::cout<<*pointer<<std::endl; // this prints strange 1;
+//     std::cout<<pointer2<<std::endl;
+//     //*pointer = 432;
+//     std::cout<<x<<std::endl;
+// }
+
+// const pointers
+
+// int main()
+// {
+//     // const int x{55};
+//     // int y{43};
+//     // const int* ptr{&x};
+
+//     // int* ptr2{&y};
+    
+//     // std::cout << ptr<<std::endl;
+//     // std::cout << &y<<std::endl;
+//     // ptr = 4;
+//     // std::cout << &y<<std::endl;
+
+
+
+
+// }
+
+/// pass by address and pass by reference
+
+#include<iostream>
+#include <cassert>
+
+using namespace std;
+void print(std::string_view *name)
+{
+    assert(name);
+    cout<<*name<<endl;
+    *name = "Kiran";
+    cout<<*name<<endl;
+}
 int main()
 {
-    int x = 44;
-    int *pointer;
-    int *pointer2{&x};
-
-    std::cout<<x<<std::endl;
-    std::cout<<*pointer<<std::endl; // this prints strange 1;
-    std::cout<<pointer2<<std::endl;
-    //*pointer = 432;
-    std::cout<<x<<std::endl;
-
+    string_view n{"ANIL"};
+    print(&n);
+    cout<<n<<endl;
+    print(nullptr);
 }
