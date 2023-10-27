@@ -26,7 +26,7 @@ class Point2d{
 
 
 };
-
+    
 int main()
 {
     Point2d first{};
